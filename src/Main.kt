@@ -1,30 +1,30 @@
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
-fun task1(bufferedReader: BufferedReader){
+fun task1(){
     println("Завдання №1")
 
     print("Введіть довжину ребра A: ")
-    val A: Double = bufferedReader.readLine().toDouble()
+    val A: Double = readln().toDouble()
 
     print("Введіть довжину ребра B: ")
-    val B: Double = bufferedReader.readLine().toDouble()
+    val B: Double = readln().toDouble()
 
     print("Введіть довжину ребра C: ")
-    val C: Double = bufferedReader.readLine().toDouble()
+    val C: Double = readln().toDouble()
 
     val volume = A * B * C
     println("Об'єм паралелепіпеда: $volume")
 
     val surfaceArea = 2 * (A * B + A * C + B * C)
-    println("Площа поверхні паралелепіпеда: $surfaceArea")
+    println("Площа поверхні прямокутного паралелепіпеда: $surfaceArea")
 }
 
-fun task2(bufferedReader: BufferedReader){
+fun task2(){
     println("Завдання №2")
 
     print("Введіть чотирицифрове натуральне число: ")
-    val number: Int = bufferedReader.readLine().toInt()
+    val number: Int = readln().toInt()
 
     val firstDigit = number / 1000
     val fourthDigit = number % 10
@@ -41,9 +41,7 @@ fun task2(bufferedReader: BufferedReader){
 }
 
 fun main() {
-    val bufferedReader = BufferedReader(InputStreamReader(System.`in`))
+    task1()
 
-    task1(bufferedReader)
-
-    task2(bufferedReader)
+    task2()
 }
