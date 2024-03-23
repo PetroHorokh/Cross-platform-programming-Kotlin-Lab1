@@ -1,30 +1,43 @@
-import java.io.BufferedReader
-import java.io.InputStreamReader
+import kotlin.math.abs
 
-fun task1(){
+fun task1() {
     println("Завдання №1")
 
-    print("Введіть довжину ребра A: ")
-    val A: Double = readln().toDouble()
+    var A: Double
+    var B: Double
+    var C: Double
 
-    print("Введіть довжину ребра B: ")
-    val B: Double = readln().toDouble()
+    do {
+        print("Введіть довжину ребра A: ")
+        A = readln().toDouble()
+    } while (A <= 0)
 
-    print("Введіть довжину ребра C: ")
-    val C: Double = readln().toDouble()
+    do {
+        print("Введіть довжину ребра B: ")
+        B = readln().toDouble()
+    } while (B <= 0)
+
+    do {
+        print("Введіть довжину ребра C: ")
+        C = readln().toDouble()
+    } while (C <= 0)
 
     val volume = A * B * C
-    println("Об'єм паралелепіпеда: $volume")
+    println("Об'єм прямокутного паралелепіпеда: $volume")
 
     val surfaceArea = 2 * (A * B + A * C + B * C)
     println("Площа поверхні прямокутного паралелепіпеда: $surfaceArea")
 }
 
-fun task2(){
+fun task2() {
     println("Завдання №2")
 
-    print("Введіть чотирицифрове натуральне число: ")
-    val number: Int = readln().toInt()
+    var number: Int
+
+    do {
+        print("Введіть чотирицифрове натуральне число: ")
+        number = readln().toInt()
+    } while (abs(number.toDouble()).toString().length != 4)
 
     val firstDigit = number / 1000
     val fourthDigit = number % 10
