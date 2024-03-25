@@ -37,7 +37,7 @@ fun task2() {
     do {
         print("Введіть чотирицифрове натуральне число: ")
         number = readln().toInt()
-    } while (abs(number.toDouble()).toString().length != 4)
+    } while (abs(number.toDouble()).toString().length != 4 && number < 0)
 
     val firstDigit = number / 1000
     val fourthDigit = number % 10
